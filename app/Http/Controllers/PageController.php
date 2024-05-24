@@ -11,7 +11,8 @@ class PageController extends Controller
     //
     public function train(){
 
-        $trains = Trains::all();
+        $trains = Trains::where('departure_time','like','2024-05-24%')->get();
+        
 
         return view('welcome', compact('trains'));
     }
