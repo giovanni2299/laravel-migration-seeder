@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('company',25);
             $table->string('departure_station',100);
             $table->string('arrival_station',100);
-            $table->dateTime('departure_time', $precision = 0);
-            $table->dateTime('arrival_time', $precision = 0);
+            $table->dateTime('departure_time');
+            $table->dateTime('arrival_time');
             $table->string('train_code',20);
-            $table->tinyInteger('coach_number',11);
-            $table->boolean('delay')->default(1);
+            $table->tinyInteger('coach_number');
+            $table->boolean('delay');
             $table->boolean('deleted');
             
 
